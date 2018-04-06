@@ -22,6 +22,7 @@
 
 
       "liveFeed" : "/live/feed/now/{exchange}/{symbol}/{type}",
+      "getFeedsList" : "/live/feed/sub/list/{type}",
       "liveFeedSubscribe": "/live/feed/sub/{type}/{exchange}",
       "liveFeedUnsubscribe": "/live/feed/unsub/{type}/{exchange}",
       "OHLC" : "/historical/ohlc/{exchange}/{symbol}",
