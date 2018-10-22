@@ -60,12 +60,15 @@ To start using upstox services -
                 // handle error 
             });
         
-5. Set access token by invoking method called setAccessToken(your_access_token); // pass the accessToken generated in response with getAccessToken.
+7. Set access token by invoking method called setAccessToken(your_access_token); // pass the accessToken generated in response with getAccessToken.
 
         upstox.setToken(accessToken);
+
+8. Set API Version
+
+        upstox.setApiVersion(Upstox.Constants.VERSIONS.DEFAULT); // Automatically set as a  default version.
+        upstox.setApiVersion(Upstox.Constants.VERSIONS.Version_1_5_6);
         
-     
-    
 ### Examples
 
         Subsequent services can be called as shown in below
@@ -85,6 +88,15 @@ To start using upstox services -
         
         // Get Balance
         upstox.getBalance({type: "security"})  // type can be security or commodity
+          .then(function(response) {
+              console.log(response);
+          })
+          .catch(function(err) {
+              console.log(err);
+          });
+
+        // Get Subscribed symbols
+        upstox.getSubscriptions({type: "LTP"})  // type "LTP", "FULL", "ALL"
           .then(function(response) {
               console.log(response);
           })
