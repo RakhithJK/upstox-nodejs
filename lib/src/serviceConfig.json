@@ -50,5 +50,5 @@
       "getSubscriptions": "/live/feed/{type}"
     }
   },
-  "socketEndpoint": "wss://ws-api.upstox.com"
+  "socketEndpoint": "wss://staging-ws-api.upstox.com"
 }
